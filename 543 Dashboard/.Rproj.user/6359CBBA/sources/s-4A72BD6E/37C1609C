@@ -1,0 +1,29 @@
+{
+    "id": "37C1609C",
+    "path": "~/GitHub/finalDash/Shaw_Dashboard.Rmd",
+    "project_path": null,
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1646356579723.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "tempName": "Untitled1",
+        "chunk_output_type": "inline",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "39,17",
+        "scrollLine": "25",
+        "last_setup_crc32": "4A72BD6E156bcc"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1646673820,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1646675870569,
+    "read_only": false,
+    "read_only_alternatives": []
+}

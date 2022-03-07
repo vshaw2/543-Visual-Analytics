@@ -1,0 +1,4 @@
+"0","LegLabel = 'ESJ Score by Census Tract' "
+"0",""
+"0","kc_demographics_SF=kc_demographics%>%st_sf()"
+"0","ggplot()  + geom_sf(data=kc_demographics_SF, aes(fill=cluster))"

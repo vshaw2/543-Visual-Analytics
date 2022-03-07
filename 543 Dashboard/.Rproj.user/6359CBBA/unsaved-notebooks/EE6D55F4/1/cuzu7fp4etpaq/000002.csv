@@ -1,4 +1,0 @@
-"0","library(ggplot2)"
-"0",""
-"0","base=ggplot(data=phasesDF, aes(x=Phase,y=Count))"
-"0","base+geom_bar(stat = ""identity"")"

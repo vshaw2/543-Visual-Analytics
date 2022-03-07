@@ -1,4 +1,0 @@
-"0","base <- ggplot(data, aes(x = Phase,"
-"0","                   y = Count,"
-"0","                   label = Count)) +"
-"0","  theme_classic()"
