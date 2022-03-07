@@ -1,0 +1,8 @@
+"0","library(magrittr)"
+"0","library(sf)"
+"0","library(ggplot2)"
+"0","LegLabel = 'ESJ Score by Census Tract' "
+"0",""
+"0","# using st_sf() to turn kc_demographics into a sf object (map)"
+"0","kc_demographics_SF=kc_demographics%>%st_sf()"
+"0","ggplot()  + geom_sf(data=kc_demographics_SF, aes(fill=cluster))"

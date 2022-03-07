@@ -1,0 +1,6 @@
+"0","DateColumns=c(""Gate.1"",""Gate.2"",""Gate.3"","
+"0","               ""Gate.1..Performance.Reference."",""Gate.2..Performance.Reference."",""Gate.3..Performance.Reference."")"
+"0","torisSubSet[,DateColumns]=lapply(torisSubSet[,DateColumns],as.Date,format='%m/%d/%Y')"
+"0",""
+"0","# you get:"
+"0","torisSubSet"

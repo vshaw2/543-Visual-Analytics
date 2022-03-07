@@ -1,0 +1,8 @@
+"0","data <- tab_All"
+"0","data$Phase <- factor(data$Phase, levels = c('PLANNING',"
+"0","                                          'PREDESIGN',"
+"0","                                          'DESIGN',"
+"0","                                          'IMPLEMENT',"
+"0","                                          'CLOSEOUT',"
+"0","                                          'HOLD',"
+"0","                                          'NOT SET'))"

@@ -1,0 +1,2 @@
+"0","df2<- df%>% select(Name, 'Portfolio Category', `Gate 2`, `Gate 2 (Performance/Reference)`) %>% drop_na()"
+"0","df2"

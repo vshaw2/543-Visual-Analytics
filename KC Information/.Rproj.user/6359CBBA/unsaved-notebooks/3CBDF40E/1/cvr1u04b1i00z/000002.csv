@@ -1,0 +1,3 @@
+"0","df <- read_csv(""PRISM pull Jan 23: Schedule Data of Active Projects.csv"")"
+"2","Error: 'PRISM pull Jan 23: Schedule Data of Active Projects.csv' does not exist in current working directory ('D:/ /UW Grad/543 Visual Analytics/KC Information').
+"

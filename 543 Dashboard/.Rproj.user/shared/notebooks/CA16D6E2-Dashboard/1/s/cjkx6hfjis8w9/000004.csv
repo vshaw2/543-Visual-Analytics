@@ -1,0 +1,6 @@
+"0",""
+"0","roadssub=roads[complete.cases(roads$Latitude),]"
+"0",""
+"0","roadsloc = st_as_sf(roadssub, coords = c(""Longitude"",""Latitude""), "
+"0","                    crs = st_crs (kc_demographics_SF))"
+"0","ggplot()  + geom_sf(data=roadsloc)"

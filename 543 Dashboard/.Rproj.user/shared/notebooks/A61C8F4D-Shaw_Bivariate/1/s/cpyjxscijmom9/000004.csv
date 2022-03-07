@@ -1,0 +1,3 @@
+"0","library(reshape2)"
+"0","DFtoPlot=melt(DFtoPlot,id.vars = 'Portfolio.Category')"
+"0","DFtoPlot"

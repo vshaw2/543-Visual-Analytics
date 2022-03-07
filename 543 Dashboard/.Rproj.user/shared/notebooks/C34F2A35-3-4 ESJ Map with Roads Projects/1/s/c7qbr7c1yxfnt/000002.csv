@@ -1,0 +1,1 @@
+"0","Final_map <- ggplot() + geom_sf(data = kc_demographics, mapping = aes(fill = esj_score), show.legend = FALSE) + scale_fill_viridis() + geom_point(data=roadmapdata, mapping = aes (x = lon, y= lat), colour = ""red"") + coord_sf()"

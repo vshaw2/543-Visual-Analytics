@@ -1,0 +1,3 @@
+"0","torisSubSet$Portfolio.Category= ifelse(torisSubSet$Portfolio.Category%in%toRecode,"
+"0","                                       ""Road and Traffic"","
+"0","                                       torisSubSet$Portfolio.Category)"

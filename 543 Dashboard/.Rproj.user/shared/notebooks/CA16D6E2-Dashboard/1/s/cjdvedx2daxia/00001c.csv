@@ -1,0 +1,4 @@
+"0",""
+"0","aggregate(data=torisCompleteDates,"
+"0","          cbind(Diff1,Diff2,Diff3)~Portfolio.Category,"
+"0","          FUN=mean)"

@@ -1,0 +1,3 @@
+"0","phasesDF=as.data.frame(table(df$Phase))"
+"0","names(phasesDF)=c(""Phase"", ""Count"")"
+"0",""

@@ -1,0 +1,3 @@
+"0","roadmapdata <- roadsproj %>% drop_na(c(""Longitude"", ""Latitude"")) %>%"
+"0","  mutate(Phase = `ï..Phase`, lon = Longitude, lat = Latitude) %>%"
+"0","  select(c(Number, Name, Phase, lon, lat))"

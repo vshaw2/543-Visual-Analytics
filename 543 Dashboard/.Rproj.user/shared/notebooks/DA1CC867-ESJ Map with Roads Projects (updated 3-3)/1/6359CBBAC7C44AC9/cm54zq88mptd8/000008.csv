@@ -1,0 +1,3 @@
+"0","new = st_crs(4326)"
+"0","kc_demographics=st_transform(kc_demographics,   new)"
+"0","roadsloc = st_as_sf(roadssub, coords = c(""Latitude"",""Longitude""), crs = st_crs (kc_demographics))"

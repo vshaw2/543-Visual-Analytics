@@ -1,0 +1,54 @@
+---
+title: "R Notebook"
+output:
+  html_document:
+    df_print: paged
+---
+```{r}
+library(tidyverse)
+df <- read_csv("RoadsProjectScheduleData.csv")
+```
+```{r}
+glimpse(df, width = 75)
+```
+
+```{r}
+df2<- df %>% filter(!df$`Portfolio Category`%in%c("Quick Response","Contingencies","Administrative","Maintenance Facilities"))
+```
+```{r}
+df2<- df %>% filter(!df$Phase%in%c("OPERATIONS","LAND"))
+```
+```{r}
+str(df)
+
+```
+```{r}
+df2$`Gate 2`<-as.Date(df2$`Gate 2`,"%m/%d/%Y")
+```
+```{r}
+df2$`Gate 2 (Performance/Reference)`<-as.Date(df2$`Gate 2 (Performance/Reference)`,"%m/%d/%Y")
+```
+
+```{r}
+str(df2)
+```
+```{r}
+df2<- df%>% select(Name, 'Portfolio Category', `Gate 2`, `Gate 2 (Performance/Reference)`) %>% drop_na()
+df2
+```
+
+#not sure if I need to do this command? 
+```{r}
+difftime(df2['Gate 2'], df2 ['Gate 2(Performance/Reference)'], units = "days") %>%as.numeric()
+
+```
+
+
+#this is what i'd like to create 
+```{r}
+mutate(schedule_variance = ('Gate 2'- 'Gate 2 (Performance/Reference)'), p_schedule_variance = (schedule_variance / 'Gate 2'))
+         
+```
+
+
+

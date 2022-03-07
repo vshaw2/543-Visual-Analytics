@@ -1,0 +1,6 @@
+"0","df <- df %>% filter(!df$Phase%in%c(""OPERATIONS"",""LAND""))"
+"2","Error: Problem with `filter()` input `..1`.
+[34mi[39m Input `..1` is `!df$Phase %in% c(""OPERATIONS"", ""LAND"")`.
+[31mx[39m Input `..1` must be of size 201 or 1, not size 0.
+[90mRun `rlang::last_error()` to see where the error occurred.[39m
+"

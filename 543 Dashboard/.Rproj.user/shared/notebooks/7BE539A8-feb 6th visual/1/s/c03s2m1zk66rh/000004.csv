@@ -1,0 +1,3 @@
+"0","Table1DF=as.data.frame(Table1)"
+"0","names (Table1DF)=c(""Portfolio_Category"", ""Project_Phase"", ""counts"")"
+"0","Table1DF"

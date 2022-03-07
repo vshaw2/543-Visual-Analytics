@@ -1,0 +1,4 @@
+"0","library(ggplot2)"
+"0","base1=ggplot(data=CategorybyPhaseDF, "
+"0","             aes(x=ProjectPhase, y=pctCol,"
+"0","                 fill=PortfolioCategory))"

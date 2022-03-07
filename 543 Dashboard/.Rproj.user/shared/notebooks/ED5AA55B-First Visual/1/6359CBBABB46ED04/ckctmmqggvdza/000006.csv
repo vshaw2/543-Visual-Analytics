@@ -1,0 +1,7 @@
+"0","(PhasesGate1=table(data$Phase,data$PortfolioCategory))"
+"2","Warning:"
+"2"," Unknown or uninitialised column: `PortfolioCategory`.
+"
+"2","Error in table(data$Phase, data$PortfolioCategory) : 
+  all arguments must have the same length
+"

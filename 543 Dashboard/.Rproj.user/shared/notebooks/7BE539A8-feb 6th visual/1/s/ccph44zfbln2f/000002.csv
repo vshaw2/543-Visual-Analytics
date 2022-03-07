@@ -1,0 +1,1 @@
+"0","df <- df %>% filter(!df$`Portfolio Category`%in%c(""Quick Response"",""Contingencies"", ""Administrative"" , ""Maintenance Facilities""))"

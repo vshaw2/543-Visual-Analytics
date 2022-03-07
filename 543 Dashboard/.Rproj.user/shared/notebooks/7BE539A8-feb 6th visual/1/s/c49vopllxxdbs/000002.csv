@@ -1,0 +1,3 @@
+"0","base2 = ggplot (CategorybyPhaseDF, aes(x = ProjectPhase, y = pctCOL, fill=PortfolioCategory))"
+"0",""
+"0","heat = base2 + geom_tile()"

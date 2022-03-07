@@ -1,0 +1,99 @@
+---
+title: "ESJ Map"
+author: "Brian"
+date: "2/14/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(cluster)
+library(sf)
+library(viridis)
+library(leaflet)
+library(mapview)
+library(tmap)
+```
+
+```{r}
+kc_demographics <- read_rds("kc_demographics (3).rds")
+#glimpse(kc_demographics, width = 100)
+head(kc_demographics)
+```
+
+```{r}
+set.seed(23994)
+vars <- c('med_income', 'p_e_less', 'percent_poc')#variables needed
+equity_matrix <- cluster::daisy(kc_demographics[,vars])
+res.pam <- cluster::pam(x=equity_matrix,k = 5,cluster.only = F)
+#test
+kc_demographics$cluster <- as.double(res.pam$clustering)
+#kc_demographics$cluster <- as.factor(res.pam$clustering)
+#kc_demographics$cluster=factor(dataCSV$cluster,
+#                           levels=c(1,3,2),
+#                           labels=c("low","mid","best"), 
+#                           ordered=T)
+head(kc_demographics)
+```
+
+c_demographics %\>% glimpse(width = 100)
+
+```{r}
+kc_demographics %>% glimpse(width = 100)
+table(kc_demographics$cluster,
+                exclude = 'nothing')
+summary(kc_demographics$cluster)
+summary_income <- aggregate(data=kc_demographics, med_income~cluster, median)
+summary_english <- aggregate(data=kc_demographics, p_e_less~cluster, mean)
+summary_poc <- aggregate(data=kc_demographics, percent_poc~cluster, mean)
+esj_summary <- summary_income %>% inner_join(summary_english) %>% inner_join(summary_poc)
+esj_summary[order(esj_summary$percent_poc),]
+```
+
+```{r}
+kc_demographics$cluster <- factor(kc_demographics$cluster,
+                                  levels=c(1,5,2,3,4),
+                                  labels=c("low income diverse",
+                                           "low income middle diverse",
+                                           "middle income middle diverse", 
+                                           "high income low diversity", 
+                                           "middle income low diversity"),
+                                  ordered=T)
+kc_demographics
+```
+
+```{r}
+ESJ_map <- kc_demographics %>% mutate(esj_score = as.integer(cluster)) %>%
+  st_sf() %>%
+  ggplot(
+    aes(fill = esj_score)) +
+  geom_sf() +
+  scale_fill_viridis()
+ESJ_map
+```
+```{r}
+roadsproj=read.csv("Geographic Data Roads Projects.csv")
+```
+
+```{r}
+roadssub=roadsproj[complete.cases(roadsproj$Latitude),]
+```
+```{r}
+roadsloc = st_as_sf(roadssub, coords = c("Latitude","Longitude"), crs = st_crs (ESJ_map))
+
+head(roadsloc)
+```
+
+
+```{r}
+Roads_Map= ESJ_map + geom_sf(data = roadsloc)
+
+Roads_Map
+
+```
+
+
+
+
+

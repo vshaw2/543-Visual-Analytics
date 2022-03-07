@@ -1,0 +1,35 @@
+"0","glimpse(df)"
+"1","Rows: 200"
+"1",""
+"1","
+"
+"1","Columns: 23"
+"1",""
+"1","
+"
+"1","$ Phase                                          [3m[38;5;246m<chr>[39m[23m ""PLANNING"", ""PLANNING"", ""OPERATIONS"", ""PREDESIGN"", ""IMPL~
+$ Number                                         [3m[38;5;246m<chr>[39m[23m ""1026798"", ""1026799"", ""1026800"", ""1027163"", ""1111819"", ""~
+$ Name                                           [3m[38;5;246m<chr>[39m[23m ""RSD EMRGNT NEED-EXISTING PRJ"", ""RSD CIP GRANT CONTIGENC~
+$ Program                                        [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""RSD QUICK RESPONSE"", ""RSD C W DRAINAGE PRES~
+$ Master                                         [3m[38;5;246m<chr>[39m[23m ""No"", ""No"", ""No"", ""Yes"", ""Yes"", ""No"", ""No"", ""Yes"", ""No"",~
+$ Active                                         [3m[38;5;246m<chr>[39m[23m ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ~
+$ `Project Manager`                              [3m[38;5;246m<chr>[39m[23m ""Mitchell, Patricia"", ""Mitchell, Patricia"", ""Mitchell, P~
+$ `Portfolio Category`                           [3m[38;5;246m<chr>[39m[23m ""Quick Response"", ""Contingencies"", ""Administrative"", ""Co~
+$ `Gate 1`                                       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, ""11/8/2018"", NA, ""11/3/2~
+$ `Gate 2`                                       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, ""5/14/2019"", NA, ""1/10/2~
+$ `Gate 3`                                       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, ""12/31/2022"", ""4/20/~
+$ `30% Design`                                   [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, ""1/18/2019"", ""12/31/2022~
+$ `60% Design`                                   [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, ""3/1/2019"", NA, ""9/16/20~
+$ `90% Design`                                   [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, ""3/25/2019"", NA, ""8/22/2~
+$ `NTP Issued/Start Con`                         [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, ""9/1/2020"", NA, ""2/16/20~
+$ `Gate 1 (Performance/Reference)`               [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ""11/3/2016"", ""3/~
+$ `Gate 2 (Performance/Reference)`               [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ""1/10/2017"", ""8/~
+$ `Gate 3 (Performance/Reference)`               [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, ""1/31/2020"", ""4/20/2~
+$ `30% Design (Performance/Reference)`           [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, ""1/31/2020"", ""3/31/2~
+$ `60% Design (Performance/Reference)`           [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ""9/16/2017"", ""10~
+$ `90% Design (Performance/Reference)`           [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ""8/22/2018"", ""4/~
+$ `NTP Issued/Start Con (Performance/Reference)` [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ""2/16/2020"", NA,~
+$ `Capital/Operating`                            [3m[38;5;246m<chr>[39m[23m ""Capital Project"", ""Capital Project"", ""Capital Project"",~"
+"1",""
+"1","
+"

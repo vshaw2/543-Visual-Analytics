@@ -1,0 +1,85 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+df <- read_csv("Projects - January 24, 2022.csv")
+```
+```{r}
+(PhasebyCatogory=table(df$Phase,df$`Portfolio Category`))
+```
+
+```{r}
+library(tidyverse)
+
+```
+```{r}
+(Precentage=prop.table(PhasebyCatogory, margin = 2)%>%round(.,3))
+```
+```{r}
+(CategorybyPhase=table(df$`Portfolio Category`,df$Phase))
+```
+```{r}
+(Percentage=prop.table(CategorybyPhase, margin = 2)%>%round(.,3))
+```
+
+```{r}
+CategorybyPhaseDF=as.data.frame(CategorybyPhase)
+names (CategorybyPhaseDF)=c("Portfolio Category", "Project Phase", "counts")
+```
+```{r}
+CategorybyPhaseDF$pctCOL=as.data.frame(Percentage)[,3]
+```
+
+```{r}
+CategorybyPhaseDF 
+```
+```{r}
+library(ggplot2)
+base1=ggplot(data=CategorybyPhaseDF, 
+             aes(x=ProjectPhase, y=pctCol,
+                 fill=PortfolioCategory))
+```
+```{r}
+glimpse(df)
+```
+
+
+```{r}
+base2 = ggplot (CategorybyPhaseDF, aes(x = ProjectPhase, y = pctCOL, fill=PortfolioCategory))
+
+heat = base2 + geom_tile()
+```
+```{r}
+heat = heat +scale_fill_gradient(low = "white", 
+                                   high = "black")
+heat = heat + theme_classic()
+
+heat
+```
+
+```{r}
+df <- df %>% filter(!df$`Portfolio Category`%in%c("Quick Response","Contingencies", "Administrative" , "Maintenance Facilities"))
+```
+```{r}
+glimpse (df)
+```
+```{r}
+
+```
+
+
+```{r}
+(Table1=table(df$`Portfolio Category`,df$Phase))
+```
+```{r}
+Table1DF=as.data.frame(Table1)
+names (Table1DF)=c("Portfolio_Category", "Project_Phase", "counts")
+
+```
+

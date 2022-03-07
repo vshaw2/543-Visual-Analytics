@@ -1,0 +1,4 @@
+"0","difftime(df2['Gate 2'], df2 ['Gate 2(Performance/Reference)'], units = ""days"") %>%as.numeric()"
+"2","Error in as.POSIXct.default(time1) : 
+  do not know how to convert 'time1' to class “POSIXct”
+"

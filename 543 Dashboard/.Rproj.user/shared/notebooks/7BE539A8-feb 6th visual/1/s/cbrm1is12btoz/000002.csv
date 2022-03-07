@@ -1,0 +1,35 @@
+"0","glimpse (df)"
+"1","Rows: 174"
+"1",""
+"1","
+"
+"1","Columns: 23"
+"1",""
+"1","
+"
+"1","$ Phase                                          [3m[38;5;246m<chr>[39m[23m ""IMPLEMENT"", ""CLOSEOUT"", ""CLOSEOUT"", ""IMPLEMENT"", ""DESIG~
+$ Number                                         [3m[38;5;246m<chr>[39m[23m ""1111819"", ""1116885"", ""1124986"", ""1125758"", ""1127589"", ""~
+$ Name                                           [3m[38;5;246m<chr>[39m[23m ""RSD C W DRAINAGE PRESERVATION"", ""RSD WOODINVILLE DUVALL~
+$ Program                                        [3m[38;5;246m<chr>[39m[23m ""RSD C W DRAINAGE PRESERVATION"", NA, ""RSD CW HRRRP"", NA,~
+$ Master                                         [3m[38;5;246m<chr>[39m[23m ""Yes"", ""No"", ""Yes"", ""No"", ""No"", ""No"", ""Yes"", ""Yes"", ""Yes~
+$ Active                                         [3m[38;5;246m<chr>[39m[23m ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ""Yes"", ~
+$ `Project Manager`                              [3m[38;5;246m<chr>[39m[23m ""Shular, Ryan"", ""McManus, Aileen"", NA, ""Shular, Ryan"", ""~
+$ `Portfolio Category`                           [3m[38;5;246m<chr>[39m[23m ""Drainage"", ""Traffic Control"", ""Roadway"", ""Roadway"", ""Dr~
+$ `Gate 1`                                       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""11/8/2018"", ""3/3/2016"", ""3/2/2016"", NA, NA,~
+$ `Gate 2`                                       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""5/14/2019"", ""8/5/2016"", ""1/4/2016"", NA, NA,~
+$ `Gate 3`                                       [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""2/28/2022"", NA, NA, NA, ""1/8/2019"", NA,~
+$ `30% Design`                                   [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""1/18/2019"", ""8/5/2016"", ""1/4/2016"", NA, NA,~
+$ `60% Design`                                   [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""3/1/2019"", ""10/27/2016"", NA, NA, NA, NA, NA~
+$ `90% Design`                                   [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""3/25/2019"", ""4/14/2017"", NA, NA, NA, NA, NA~
+$ `NTP Issued/Start Con`                         [3m[38;5;246m<chr>[39m[23m NA, NA, NA, ""9/1/2020"", NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ `Gate 1 (Performance/Reference)`               [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""3/3/2016"", NA, NA, NA, NA, ""8/2/2017"", ~
+$ `Gate 2 (Performance/Reference)`               [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""8/5/2016"", NA, NA, NA, NA, ""8/2/2017"", ~
+$ `Gate 3 (Performance/Reference)`               [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""8/5/2016"", NA, NA, NA, ""1/8/2019"", NA, ~
+$ `30% Design (Performance/Reference)`           [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""8/5/2016"", NA, NA, NA, ""1/8/2019"", NA, ~
+$ `60% Design (Performance/Reference)`           [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""10/27/2016"", NA, NA, NA, NA, NA, NA, NA~
+$ `90% Design (Performance/Reference)`           [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, ""4/14/2017"", NA, NA, NA, NA, NA, NA, NA,~
+$ `NTP Issued/Start Con (Performance/Reference)` [3m[38;5;246m<chr>[39m[23m NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, ~
+$ `Capital/Operating`                            [3m[38;5;246m<chr>[39m[23m ""Capital Project"", ""Capital Project"", ""Capital Project"",~"
+"1",""
+"1","
+"

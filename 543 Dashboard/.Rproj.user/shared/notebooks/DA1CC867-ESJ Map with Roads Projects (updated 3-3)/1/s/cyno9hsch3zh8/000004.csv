@@ -1,0 +1,7 @@
+"0","ESJ_map <- kc_demographics %>% mutate(esj_score = as.integer(cluster)) %>%"
+"0","  st_sf() %>%"
+"0","  ggplot("
+"0","    aes(fill = esj_score)) +"
+"0","  geom_sf() +"
+"0","  scale_fill_viridis()"
+"0","ESJ_map"

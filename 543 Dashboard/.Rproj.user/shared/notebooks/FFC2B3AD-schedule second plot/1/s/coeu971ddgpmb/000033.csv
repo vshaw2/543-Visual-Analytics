@@ -1,0 +1,15 @@
+"0","titleText = 'Gate Schedule Variance for Active Projects'"
+"0","sourceText = 'King County Road Services Division'"
+"0",""
+"0","baseMEANs= ggplot(DFtoPlot[DFtoPlot$value!=2033,], aes(title=titleText, x=Portfolio.Category,"
+"0","                      y=value, caption = sourceText)) +"
+"0","        theme_classic()"
+"0","jitterMEANs= baseMEANs + geom_jitter(colour=""blue"","
+"0","                             alpha=0.2)"
+"0","jitterMEANs=jitterMEANs + geom_point(stat=""summary"") +"
+"0","             geom_errorbar(stat=""summary"")"
+"0","jitterMEANs + scale_y_continuous(breaks = c(100, 250, 500),labels = scales::comma) + labs(title = titleText, caption = sourceText) + xlab(""Unit"") + ylab(""Gate Schedule Variance of Active Projects"") + theme(plot.title = element_text(hjust = 0.5))"
+"2","No summary function supplied, defaulting to `mean_se()`
+"
+"2","No summary function supplied, defaulting to `mean_se()`
+"

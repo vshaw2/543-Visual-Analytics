@@ -1,0 +1,8 @@
+"0","ggplot()  + "
+"0","    # first layer"
+"0","    geom_sf(data=kc_demographics_SF, "
+"0","                    aes(fill=cluster), "
+"0","                    alpha=0.5) +  #alpha for transparency"
+"0","    #second layer"
+"0","    geom_sf(data=roadsloc, color='red') "
+"0",""
