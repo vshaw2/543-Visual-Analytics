@@ -1,0 +1,25 @@
+---
+title: "Final Dashboard"
+output:   
+  
+    flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(leaflet)
+library(mapview)
+library(tmap)
+library(sf)
+library(cluster)
+
+library(ggplot2)
+
+myWeb= "https://github.com/vshaw2/finalDash/blob/main/"
+kc_demographics= readRDS(file=url(paste0(myWeb, "kc_demographics%20(3).rds")))
+roads=readRDS(file=url(paste0(myWeb,"Projects%20-%20January%2024%2C%202022.rds"))
+roadsproj=read.csv(paste0(myWeb,"Geographic%20Data%20Roads%20Projects.csv"))
+```

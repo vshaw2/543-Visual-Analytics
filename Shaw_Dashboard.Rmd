@@ -17,27 +17,53 @@ library(sf)
 library(cluster)
 
 library(ggplot2)
-myWeb= "https://github.com/vshaw2/finalDash"
-
-roadsproj= 
+myWeb= "https://github.com/vshaw2/543-Visual-Analytics/raw/main/"
+```
+```{r}
+kc_demographics= readRDS(file=url(paste0(myWeb, "kc_demographics.rds")))
+roads=read.csv(paste0(myWeb,"Geographic%20Data%20Roads%20Projects.csv"))
+roadsproj=read.csv(paste0(myWeb,"Projects%20-%20January%2024%2C%202022.csv"))
 ```
 
 [comment]: # (code for plots in this column)
 
-```{r, univariate}
-saveRDS(phasesDF, "toriphases.rds")
-
-
-```
-
-
 ```{r, bivariate}
-saveRDS(torisCompleteDates,"torisCompleteDates.rds")
+library(tidyverse)
+categoryToSelect=c("Drainage","Roadway","Roadside","Traffic Control","Bridges & Structures")
+torisSubSet=roadsproj[roadsproj$Portfolio.Category%in%categoryToSelect,]
 
-readRDS(file=url())
+toRecode=c("Roadway","Roadside","Traffic Control")
+ifelse(torisSubSet$Portfolio.Category%in%toRecode, 
+       "Road and Traffic",
+       torisSubSet$Portfolio.Category)
 
+torisSubSet$Portfolio.Category= ifelse(torisSubSet$Portfolio.Category%in%toRecode,
+                                       "Road and Traffic",
+                                       torisSubSet$Portfolio.Category)
+varsToSelect=c("Portfolio.Category","Gate.1","Gate.2","Gate.3",
+               "Gate.1..Performance.Reference.","Gate.2..Performance.Reference.","Gate.3..Performance.Reference.","Number", "Name")
+torisSubSet=torisSubSet[,varsToSelect]
+
+DateColumns=c("Gate.1","Gate.2","Gate.3",
+               "Gate.1..Performance.Reference.","Gate.2..Performance.Reference.","Gate.3..Performance.Reference.")
+
+torisSubSet[,DateColumns]=lapply(torisSubSet[,DateColumns],as.Date,format='%m/%d/%Y')
+
+torisSubSet
+
+torisCompleteDates=torisSubSet[complete.cases(torisSubSet),]
+torisCompleteDates
+
+torisCompleteDates[,8:10]=0
+torisCompleteDates[,8:10]=torisCompleteDates[,2:4]-torisCompleteDates[,5:7]
+names(torisCompleteDates)[8:10]=c("Diff1","Diff2","Diff3")
+torisCompleteDates[,8:10]=lapply(torisCompleteDates[,8:10],as.numeric)
+torisCompleteDates[,8:10]
+
+aggregate(data=torisCompleteDates,
+          cbind(Diff1,Diff2,Diff3)~Portfolio.Category,
+          FUN=mean)
 ```
-
 ```{r,map}
 set.seed(23994)
 vars <- c('med_income', 'p_e_less','percent_poc')
@@ -93,10 +119,9 @@ Column {data-width=400}
 
 ###Plot 2
 ```{r}
-phasesDF=as.data.frame(table(roadsproj$ï..Phase))
-phasesDF <- roadsproj %>% filter(!roadsproj$ï..Phase%in%c("OPERATIONS","LAND"))
+df <- roadsproj %>% filter(!roadsproj$ï..Phase%in%c("OPERATIONS","LAND"))
 
-
+phasesDF=as.data.frame(table(df$ï..Phase))
 names(phasesDF)=c("Phase", "Count")
 
 phasesDF$Phase <- factor(phasesDF$Phase, levels = c('PLANNING',
@@ -106,7 +131,17 @@ phasesDF$Phase <- factor(phasesDF$Phase, levels = c('PLANNING',
                                           'CLOSEOUT',
                                           'HOLD',
                                           'NOT SET'))
+df2 <- df %>% select(ï..Phase, Master)
 
+tab_All <- df2 %>% select(-Master) %>% table() %>% as_tibble() %>% rename(ï..Phase = ".", Count = n)
+tab_M_Yes <- df2 %>% filter(Master == "Yes") %>% table() %>% as_tibble() %>% rename(Count = n)
+tab_M_No <- df2 %>% filter(Master == "No") %>% table() %>% as_tibble() %>% rename(Count = n)
+
+title_Text <- 'Total Number of Roads Capital Projects by Phase'
+X_axis_title <- 'Project Phases'
+max <- as.integer(max(tab_All$Count))
+
+library(ggplot2)
 
 base=ggplot(data=phasesDF, aes(x=Phase,y=Count))
 base+geom_bar(stat = "identity")
@@ -150,6 +185,7 @@ library(reshape2)
 DFtoPlot=melt(DFtoPlot,id.vars = 'Portfolio.Category')
 DFtoPlot
 
+library(ggplot2)
 
 base=ggplot(data=DFtoPlot) + theme_classic()
 base + geom_boxplot(aes(x=Portfolio.Category,
